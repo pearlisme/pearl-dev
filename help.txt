@@ -1,0 +1,41 @@
+
+
+
+#npm install express-generator -g (for global instead of the workspace)
+
+express . --hbs (to create handlebars view)
+
+##############################################
+ package.json file you will see 
+
+"name": "workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"    -----> if you choose start it will indirectly call node ./bin/www
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",       -------> express version here is ~4.13.4 whiche means the system will accept versions from 4.13.*, you can also make it less resctritive by adding ^ in front will accept 4.*.*
+    "hbs": "~4.0.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  }
+  ############################################
+  
+  Under /bin/www file
+  
+  In first line you will see #!/usr/bin/env node which means it will start from anywhere
+  
+  var app = require('../app'); this line tells the system to load the app module
+  
+  if you run bin/www you will see error 
+  because the node can't find express module
+  in app.js you will see the line var express = require('express'); which mean the express generator created the skeleton for the list of modules 
+  so we need to install them to do so
+  
+  # npm install
+  
+  
