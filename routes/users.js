@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get('/create', function(req, res, next) {
+  res.render('users/create',{title:'Create an Account '});
+});
+
 module.exports = router;
