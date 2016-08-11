@@ -1,0 +1,21 @@
+<div class="entry">
+  <h1>My New Post</h1>
+  <div class="body">
+    This is my first post!
+  </div>
+{{title}}
+</div>
+<ul>
+  <li>Yehuda Katz</li>
+  <li>Carl Lerche</li>
+  <li>Alan Johnson</li>
+</ul>
+Handlebars.registerHelper('list', function(items, options) {
+  var out = "<ul>";
+
+  for(var i=0, l=items.length; i<l; i++) {
+    out = out + "<li>" + options.fn(items[i]) + "</li>";
+  }
+
+  return out + "</ul>";
+});
